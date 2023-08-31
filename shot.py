@@ -44,9 +44,9 @@ while running:
             running = False
 
     keys = pygame.key.get_pressed()
-    if keys[pygame.K_LEFT] and player_rect.left > 0:
+    if keys[pygame.K_h] or keys[pygame.K_LEFT] and player_rect.left > 0:
         player_rect.x -= player_speed
-    if keys[pygame.K_RIGHT] and player_rect.right < screen_width:
+    if keys[pygame.K_l] or keys[pygame.K_RIGHT] and player_rect.right < screen_width:
         player_rect.x += player_speed
     if keys[pygame.K_SPACE]:
         bullet_rect = bullet_image.get_rect(center=(player_rect.centerx, player_rect.top))
